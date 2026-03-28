@@ -1,7 +1,0 @@
-window: 5.0
-aggregate_by: global # "global" or "pid"
-enabled_modules:
-  - exec
-  - network
-  # cpu, privilege are disabled by default
-output_csv: ebpf_features.csv

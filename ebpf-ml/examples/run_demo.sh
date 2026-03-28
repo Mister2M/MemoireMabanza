@@ -1,4 +1,4 @@
 ## examples/run_demo.sh
 
 #!/usr/bin/env bash
-sudo python3 core.py --enable exec,network --window 5 --out demo.csv
+python3 core.py --modules cpu,exec,network,privilege,process_lifecycle --duration 30
