@@ -6,7 +6,7 @@ import subprocess
 
 DATA_DIR = "data"
 
-pattern = re.compile(r".*_data_(\d{4}-\d{2}-\d{2}_\d{2}-\d{2})\.csv$")
+pattern = re.compile(r".*_data_(\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2})\.csv$")
 session_ids = set()
 
 # Extraire les session_id
@@ -27,5 +27,5 @@ for session in session_ids:
     ]
 
     print(f"Exécution : {' '.join(cmd)}")
-    subprocess.run(cmd)
+    subprocess.run(cmd, check=True)
 # Note: Assurez-vous que preprocess.py est dans le même répertoire que ce script ou ajustez le chemin en conséquence.

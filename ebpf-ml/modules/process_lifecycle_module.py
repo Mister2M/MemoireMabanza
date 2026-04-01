@@ -9,8 +9,10 @@ class ProcessLifecycleModule:
         os.makedirs(self.output_dir, exist_ok=True)
 
         # Création du fichier CSV unique pour cette session
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.csv_file = os.path.join(self.output_dir, f"process_lifecycle_{timestamp}.csv")
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        self.csv_file = os.path.join(
+            self.output_dir, f"process_lifecycle_data_{timestamp}.csv"
+        )
 
         # Initialiser CSV
         with open(self.csv_file, "w", newline="") as f:
@@ -83,4 +85,3 @@ class ProcessLifecycleModule:
                 self.bpf.perf_buffer_poll()
         except KeyboardInterrupt:
             print("[ProcessLifecycleModule] Arrêt demandé par l'utilisateur.")
-

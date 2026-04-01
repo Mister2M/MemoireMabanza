@@ -1,5 +1,6 @@
-# requirements.txt
-bpfcc
+# Dépendances Python du projet.
+# La binding BCC doit être installée via les paquets système
+# (ex: python3-bpfcc sur Debian/Ubuntu), pas via pip.
 pandas
 numpy
 pyyaml
